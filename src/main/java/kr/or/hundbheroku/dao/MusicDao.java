@@ -11,16 +11,11 @@ import java.util.List;
 import kr.or.hundbheroku.dto.MusicDto;
 
 public class MusicDao {
-//	private static String dburl = "jdbc:mysql://localhost:3306/musicdb?useUnicode=true&characterEncoding=utf8"
-//	                            + "&verifyServerCertificate=false&useSSL=false&allowMultiQueries=true";
-	
+
 	private static String dburl = "jdbc:mysql://us-cdbr-iron-east-02.cleardb.net:3306/heroku_baea15322b4d46b?"
 								+ "useUnicode=true&characterEncoding=utf8"
 							    + "&reconnect=true&sslmode=require&verifyServerCertificate=false&useSSL=false&allowMultiQueries=true";
-	
-//	private static String dbUser = "hundb_user";
-//	private static String dbpasswd = "hun2019";
-	
+
 	private static String dbUser = "b7df0b0d24409a";
 	private static String dbpasswd = "25a26c2b";
 	

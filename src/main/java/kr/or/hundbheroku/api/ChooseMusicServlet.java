@@ -1,6 +1,7 @@
 package kr.or.hundbheroku.api;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.Random;
 
@@ -45,6 +46,16 @@ public class ChooseMusicServlet extends HttpServlet {
         //list 길이 구하기 
      	List<MusicDto> list = dao.getMusics();
      	int listLength = list.size();
+     	
+     	//list가 충분하지 않을 때 
+     	if(listLength < 15)
+     	{
+     		String context = request.getContextPath();
+     		
+     		PrintWriter out = response.getWriter();
+        	out.println("<script>alert('곡을 15개 이상 입력하세요!'); location.href='"+context+"/MusicList';</script>");
+        	out.flush();
+     	}
 		
      	//랜덤하게 id 15개 뽑기
 		int a[] = new int[15];    
@@ -77,10 +88,8 @@ public class ChooseMusicServlet extends HttpServlet {
      	request.setAttribute("choosedMusicAll", listOfChoosedMusics);
      	request.setAttribute("chossedMusicLength", 15);
         
-        // 컨텍스트 페스 경로가져오기
-        String context = request.getContextPath();
-        
         // 페이지 이동 
+//        String context = request.getContextPath();
 //        response.sendRedirect(context + "/chooseMusic");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/chooseMusic.jsp");
 		requestDispatcher.forward(request, response);

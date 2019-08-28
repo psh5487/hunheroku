@@ -12,10 +12,6 @@ import kr.or.hundbheroku.dto.MusicDto;
 import kr.or.hundbheroku.dto.classTimeDto;
 
 public class classTimeDao {
-//	private static String dburl = "jdbc:mysql://localhost:3306/musicdb?useUnicode=true&characterEncoding=utf8"
-//            + "&verifyServerCertificate=false&useSSL=false";
-//	private static String dbUser = "hundb_user";
-//	private static String dbpasswd = "hun2019";
 	
 	private static String dburl = "jdbc:mysql://us-cdbr-iron-east-02.cleardb.net:3306/heroku_baea15322b4d46b?"
 			+ "useUnicode=true&characterEncoding=utf8"

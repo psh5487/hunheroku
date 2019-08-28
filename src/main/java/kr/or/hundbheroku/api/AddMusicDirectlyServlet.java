@@ -113,22 +113,24 @@ public class AddMusicDirectlyServlet extends HttpServlet {
         int result = dao.addMusic(dto);
         
         // 저장결과 alert 창 띄우기 
+        String context = request.getContextPath();
+        
         if(result == 1)
         {
         	PrintWriter out = response.getWriter();
-        	out.println("<script>alert('저장되었습니다!'); location.href='/hundb/MusicList';</script>");
+        	out.println("<script>alert('저장되었습니다!'); location.href='"+context+"/MusicList';</script>");
         	out.flush();
         } 
         else if(result == 0)
         {
         	PrintWriter out = response.getWriter();
-        	out.println("<script>alert('이미 저장된 곡입니다!'); location.href='/hundb/addMusicDirectly';</script>");
+        	out.println("<script>alert('이미 저장된 곡입니다!'); location.href='"+context+"/addMusicDirectly';</script>");
         	out.flush();
         }
         else if(result == -1)
         {
         	PrintWriter out = response.getWriter();
-        	out.println("<script>alert('DB 접속에 문제가 있습니다.'); location.href='/hundb/addMusicDirectly';</script>");
+        	out.println("<script>alert('DB 접속에 문제가 있습니다.'); location.href='"+context+"/addMusicDirectly';</script>");
         	out.flush();
         }
 		

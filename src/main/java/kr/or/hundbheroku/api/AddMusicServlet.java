@@ -41,6 +41,8 @@ public class AddMusicServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=UTF-8");
+		
+		String context = request.getContextPath();
 	
 	    // form tag로부터 넘어온 값 저장 - 바코드, 선호도, category, 저장 시간(""로 보내면 db에서 알아서~)
 	    String barcode = request.getParameter("barcode");
@@ -108,7 +110,7 @@ public class AddMusicServlet extends HttpServlet {
 		 		System.out.println("크롤링 실패\n");
 		 		
 		 		PrintWriter out = response.getWriter();
-		    	out.println("<script>alert('현재 판매되지 않는 음반으로, 곡을 직접 추가해야 합니다.'); location.href='/hundb/MusicList';</script>");
+		    	out.println("<script>alert('현재 판매되지 않는 음반으로, 곡을 직접 추가해야 합니다.'); location.href='"+context+"/MusicList';</script>");
 		    	out.flush();
 		 	}
 		 	else
@@ -223,19 +225,19 @@ public class AddMusicServlet extends HttpServlet {
 		        if(result == 1)
 		        {
 		        	PrintWriter out = response.getWriter();
-		        	out.println("<script>alert('저장되었습니다!'); location.href='/hundb/MusicList';</script>");
+		        	out.println("<script>alert('저장되었습니다!'); location.href='"+context+"/MusicList';</script>");
 		        	out.flush();
 		        } 
 		        else if(result == 0)
 		        {
 		        	PrintWriter out = response.getWriter();
-		        	out.println("<script>alert('이미 저장된 곡입니다!'); location.href='/hundb/addMusic';</script>");
+		        	out.println("<script>alert('이미 저장된 곡입니다!'); location.href='"+context+"/addMusic';</script>");
 		        	out.flush();
 		        }
 		        else if(result == -1)
 		        {
 		        	PrintWriter out = response.getWriter();
-		        	out.println("<script>alert('DB 접속에 문제가 있습니다.'); location.href='/hundb/addMusic';</script>");
+		        	out.println("<script>alert('DB 접속에 문제가 있습니다.'); location.href='"+context+"/addMusic';</script>");
 		        	out.flush();
 		        }
 		 	}
@@ -354,19 +356,19 @@ public class AddMusicServlet extends HttpServlet {
 		    if(result == 1)
 		    {
 		    	PrintWriter out = response.getWriter();
-		    	out.println("<script>alert('저장되었습니다!'); location.href='/hundb/MusicList';</script>");
+		    	out.println("<script>alert('저장되었습니다!'); location.href='"+context+"/MusicList';</script>");
 		    	out.flush();
 		    } 
 		    else if(result == 0)
 		    {
 		    	PrintWriter out = response.getWriter();
-		    	out.println("<script>alert('이미 저장된 곡입니다!'); location.href='/hundb/addMusic';</script>");
+		    	out.println("<script>alert('이미 저장된 곡입니다!'); location.href='"+context+"/addMusic';</script>");
 		    	out.flush();
 		    }
 		    else if(result == -1)
 		    {
 		    	PrintWriter out = response.getWriter();
-		    	out.println("<script>alert('DB 접속에 문제가 있습니다.'); location.href='/hundb/addMusic';</script>");
+		    	out.println("<script>alert('DB 접속에 문제가 있습니다.'); location.href='"+context+"/addMusic';</script>");
 		    	out.flush();
 		    }
 		}

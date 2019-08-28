@@ -64,8 +64,10 @@ $(document).ready(function() {
 });
 
 function jsonSend(obj) {
+	var context = $('#contextPathHolder').attr('data-contextPath');
+
 	$.ajax({
-	    url: '/hundb/operationTable',
+	    url: context+"/operationTable",
 	    type: 'POST',
 	    data: {sendString: JSON.stringify(obj)}, //http 통신은 string으로만 가능함
 	    dataType: 'text',                        //dataType은 서버로부터 받아오는 결과의 type을 의미 
@@ -74,7 +76,7 @@ function jsonSend(obj) {
 	        alert("저장되었습니다!");
 //	        console.log(data);
 	        console.log(JSON.stringify(obj));
-	        window.location.replace('/hundb/operationTable'); //페이지 redirect 하기 
+	        window.location.replace(context+"/operationTable"); //페이지 redirect 하기 
 	    },
 	    error: function(request, status, error, data){
 	        alert("code = "+ request.status + " message = " + request.responseText + " error = " + error);
