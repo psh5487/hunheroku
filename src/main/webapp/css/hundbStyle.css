@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+span a { 
+	text-decoration: none; 
+	color: black;
+}
+
+header {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* main.jsp */
+.slideImg, .introductionImg {
+	width: 100%;
+}
+
+.introLogo {
+	display: flex;
+	justify-content: center;
+}
+
+.facebook, .map {
+	width: 40px;
+}
+
+footer {
+	background-color: gray;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+}
+
+/* operation.jsp */
+.change {
+	background-color: #ffeeba;
+}
+
+#submit_button:hover, #submit_button:active {
+	cursor: pointer;
+}
+
+.time td:not(.except):hover {
+	cursor: pointer;
+}
+
+/* 사이드바 래퍼 스타일 */
+#page-wrapper {
+  padding-left: 250px;
+  position: relative; 
+  top: 50px;
+}
+
+#sidebar-wrapper {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  margin-left: -250px;
+  background: #000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  padding: 20px;
+}
+ 
+/* 사이드바 스타일 */
+.sidebar-nav {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 1em;
+  line-height: 2.8em;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav > .sidebar-brand {
+  font-size: 1.3em;
+  line-height: 3em;
+}
+
+/* MusicList.jsp */
+#search_form button {
+	background-color: white;
+}
+
+#easy_button {
+	background-color: #f08787; 
+	color: white;
+}
+
+#easy_button:hover {
+	background-color: #d68282; 
+}
+
+
+
+
