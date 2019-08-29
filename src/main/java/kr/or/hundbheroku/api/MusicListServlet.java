@@ -59,8 +59,7 @@ public class MusicListServlet extends HttpServlet {
 		List<MusicDto> list = dao.getTenMusics(startInt);
 		
 		// 전체 곡 수
-		List<MusicDto> listAll = dao.getMusics();
-		int count = listAll.size();
+		int count = dao.CountMusics();
 		
 		// 전체 페이지수
 		int pageCount = count / 10;

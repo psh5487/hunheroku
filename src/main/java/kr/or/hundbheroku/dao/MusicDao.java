@@ -190,7 +190,37 @@ public class MusicDao {
 		return list;
 	}
 	
-	//COUNT 특정 keyword를 포함하는 곡 전체 수 SELECT count(*) FROM product
+	//COUNT 전체 곡 수 SELECT count(*) FROM music
+	public int CountMusics() {
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		String sql = "SELECT count(*) FROM music"; 
+				   
+		try (Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
+			 PreparedStatement ps = conn.prepareStatement(sql)) {
+			
+			try (ResultSet rs = ps.executeQuery()) {
+				if (rs.next()) {
+					
+					count = rs.getInt(1);    //(쿼리문의) 첫번째 칼럼에서 값 꺼내옴 
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		
+		return count;
+	}
+	
+	//COUNT 특정 keyword를 포함하는 곡 전체 수 SELECT count(*) FROM music
 	public int CountMusicsIncludingKeyword(String keyword) {
 		int count = 0;
 		

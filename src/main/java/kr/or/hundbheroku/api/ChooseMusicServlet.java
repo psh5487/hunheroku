@@ -44,8 +44,7 @@ public class ChooseMusicServlet extends HttpServlet {
         dao.sortingId();
         
         //list 길이 구하기 
-     	List<MusicDto> list = dao.getMusics();
-     	int listLength = list.size();
+     	int listLength = dao.CountMusics();
      	
      	//list가 충분하지 않을 때 
      	if(listLength < 15)
