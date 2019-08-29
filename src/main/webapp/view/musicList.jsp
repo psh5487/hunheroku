@@ -120,15 +120,15 @@
 			<td>${item.label}</td>
 			<td>${item.barcode}</td>
 			<td>
-				<form name="trash_form" id = "trash_form" method="POST" action="DeleteMusicServlet" accept-charset="utf-8">
-					<input type="image" src="img/remove.png" name ="trash" id="trashButton" width="21px" height="auto"/>
-					<input type="hidden" name="item_barcode" value="${item.barcode}" />
-				</form>
-			</td>
-			<td>
 				<form name="edit_form" id = "edit_form" method="GET" action="updateMusic" accept-charset="utf-8">
 					<input type="image" src="img/edit.png" name ="edit" id="editButton" width="20px" height="auto"/>
 					<input type="hidden" name="barcode" value="${item.barcode}" />
+				</form>
+			</td>
+			<td>
+				<form name="trash_form" id = "trash_form" method="POST" action="DeleteMusicServlet" accept-charset="utf-8">
+					<input type="image" src="img/remove.png" name ="trash" id="trashButton" width="21px" height="auto"/>
+					<input type="hidden" name="item_barcode" value="${item.barcode}" />
 				</form>
 			</td>
 		</tr>

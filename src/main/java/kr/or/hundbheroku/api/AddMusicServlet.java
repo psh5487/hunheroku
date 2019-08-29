@@ -2,6 +2,8 @@ package kr.or.hundbheroku.api;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -322,6 +324,21 @@ public class AddMusicServlet extends HttpServlet {
 		    	}
 		    }
 		    
+		    //artist 문자열에서 괄호 및 괄호 내용 제거하기 
+		    Pattern PATTERN_BRACKET = Pattern.compile("\\([^\\(\\)]+\\)");
+		    Matcher matcher = PATTERN_BRACKET.matcher(artist);
+	        
+	        String removeTextArea = new String();
+	        
+	        while(matcher.find()) {
+	            int startIndex = matcher.start();
+	            int endIndex = matcher.end();
+	            
+	            removeTextArea = artist.substring(startIndex, endIndex);
+	            artist = artist.replace(removeTextArea, "");
+	            matcher = PATTERN_BRACKET.matcher(artist);
+	        }
+	        
 		    System.out.println(artist);
 		    
 		    //track
