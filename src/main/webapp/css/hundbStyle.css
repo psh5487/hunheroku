@@ -152,8 +152,12 @@ header {
 	margin-right: 10px;
 }
 
-.modal-content {
+/* .modal-content {
   z-index: 1060;
+} */
+
+.modal-header, .modal-body {
+	background-color: #f3f7f9;
 }
 
 /* Responsive layout */
