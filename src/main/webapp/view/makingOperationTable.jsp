@@ -25,7 +25,8 @@
 
 <body>
 <!-- 네브바 -->
-<nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
+<!-- <nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark"> -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <a class="navbar-brand" href="<%=request.getContextPath()%>/">음취헌</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -39,21 +40,24 @@
         <a class="nav-link" href="<%=request.getContextPath()%>/chooseMusic">선곡표 만들기</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">운영시간표</a>
+        <a class="nav-link" href="<%=request.getContextPath()%>/MakingOperationTable">운영시간표</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">개인시간표 입력</a>
       </li>  
     </ul>
   </div>  
 </nav>
 
-<div id="page-wrapper">
+<!-- <div id="page-wrapper"> -->
 	<!-- 사이드바  -->
-	<div id="sidebar-wrapper">
+	<%-- <div id="sidebar-wrapper">
 	  <ul class="sidebar-nav">
 	    <!-- <li class="sidebar-brand" style="color:#999">운영시간표 짜기</li> --><br>
 	    <li><a href="<%=request.getContextPath()%>/operationTable">개인 시간표 입력</a></li>
 	    <li><a href="<%=request.getContextPath()%>/MakingOperationTable">운영시간표 짜기 </a></li>
 	  </ul>
-	</div>
+	</div> --%>
  	 
 	<div class="container">
 	  <br><br><h2>시간표 제출한 사람</h2><br>
@@ -76,20 +80,21 @@
 				<input type="hidden" name="item_id" value="${item.id}" />
 		  </form>
 		  
+		  <div class="table-responsive">
 		  <table class="table table-bordered">
 		    <thead class="table-info">
 		      <tr>
 		      	<th>시간</th>
-		        <th>월요일</th>
-		        <th>화요일</th>
-		        <th>수요일</th>
-		        <th>목요일</th>
-		        <th>금요일</th>
+		        <th>월</th>
+		        <th>화</th>
+		        <th>수</th>
+		        <th>목</th>
+		        <th>금</th>
 		      </tr>
 		    </thead>
 		    <tbody>
 		      <tr>
-		        <td class="table-warning">1시-2시</td>
+		        <td class="table-warning">1시</td>
 		        <td id="M1">${item.m1}</td>
 		        <td id="T1">${item.t1}</td>
 		        <td id="W1">${item.w1}</td>
@@ -97,7 +102,7 @@
 		        <td id="F1">${item.f1}</td>
 		      </tr>
 		      <tr>
-		        <td class="table-warning">2시-3시</td>
+		        <td class="table-warning">2시</td>
 		        <td id="M2">${item.m2}</td>
 		        <td id="T2">${item.t2}</td>
 		        <td id="W2">${item.w2}</td>
@@ -105,7 +110,7 @@
 		        <td id="F2">${item.f2}</td>
 		      </tr>
 		      <tr>
-		        <td class="table-warning">3시-4시</td>
+		        <td class="table-warning">3시</td>
 		        <td id="M3">${item.m3}</td>
 		        <td id="T3">${item.t3}</td>
 		        <td id="W3">${item.w3}</td>
@@ -113,7 +118,7 @@
 		        <td id="F3">${item.f3}</td>
 		      </tr>
 		      <tr>
-		        <td class="table-warning">4시-5시</td>
+		        <td class="table-warning">4시</td>
 		        <td id="M4">${item.m4}</td>
 		        <td id="T4">${item.t4}</td>
 		        <td id="W4">${item.w4}</td>
@@ -121,7 +126,7 @@
 		        <td id="F4">${item.f4}</td>
 		      </tr>
 		      <tr>
-		        <td class="table-warning">5시-6시</td>
+		        <td class="table-warning">5시</td>
 		        <td id="M5">${item.m5}</td>
 		        <td id="T5">${item.t5}</td>
 		        <td id="W5">${item.w5}</td>
@@ -130,10 +135,11 @@
 		      </tr>  
 		    </tbody>
 		  </table>
+		  </div>
 	  </c:forEach>
 	
 	</div><br>
-</div>
+<!-- </div> -->
 
 </body>
 </html>

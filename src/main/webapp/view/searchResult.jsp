@@ -38,25 +38,31 @@
         <a class="nav-link" href="<%=request.getContextPath()%>/chooseMusic">선곡표 만들기</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">운영시간표</a>
+        <a class="nav-link" href="<%=request.getContextPath()%>/MakingOperationTable">운영시간표</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">개인시간표 입력</a>
       </li>  
     </ul>
   </div>  
 </nav>
 <br>
 
-<div style="padding-left: 50px; padding-right: 50px">
+<div class="title">
 	<!-- 제목 -->
 	<div style="width: 250px">
 		<a class="nav-link" href="<%=request.getContextPath()%>/MusicList"><h2 style="color: black">헌 음반 리스트</h2></a>
 	</div>
-	
-	<img class = "searchImg" src="img/search.png" alt="돋보기" style="width:4%; margin-left: 70px; margin-bottom: 20px">
+</div>
+
+<div class="content">
+	<img class = "searchImg" src="img/search.png" alt="돋보기" style="width:45px; margin-left: 70px; margin-bottom: 20px">
 	
 	<!-- 검색 결과 알림 -->
 	<div style="font-size: 20px; margin-bottom: 10px">검색어 <span class="text-danger">${searchKeyword}</span> 결과 총 <span class="text-danger">${count}</span>건</div>
     
     <!-- 곡 리스트 테이블 -->
+    <div class="table-responsive">
     <table class="table">
     <thead class="thead-light">
       <tr>
@@ -123,14 +129,13 @@
 		</tr>
 	</c:forEach>
 	<tr>
-		<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+		<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
 	</tr>
-    </tbody>
+  </tbody>
   </table>
-  
-  <br><br>
-    
+  </div>
 </div>	
+<br><br>  
 	
 </body>
 </html>

@@ -39,14 +39,17 @@
         <a class="nav-link" href="<%=request.getContextPath()%>/chooseMusic">선곡표 만들기</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">운영시간표</a>
+        <a class="nav-link" href="<%=request.getContextPath()%>/MakingOperationTable">운영시간표</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">개인시간표 입력</a>
       </li>  
     </ul>
   </div>  
-</nav>
+</nav><br><br>
 
 <div class="container">
-<br><h2>곡 수정하기 </h2>
+<h2>곡 수정하기 </h2>
 
 <form name="music_form" method="POST" action="updateMusic" accept-charset="utf-8">
 	<br><h5>바코드 넘버</h5>

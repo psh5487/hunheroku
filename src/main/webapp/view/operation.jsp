@@ -29,7 +29,8 @@
 
 <body> 
 <!-- 네브바 -->
-<nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
+<!-- <nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark"> -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <a class="navbar-brand" href="<%=request.getContextPath()%>/">음취헌</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -43,36 +44,41 @@
         <a class="nav-link" href="<%=request.getContextPath()%>/chooseMusic">선곡표 만들기</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">운영시간표</a>
+        <a class="nav-link" href="<%=request.getContextPath()%>/MakingOperationTable">운영시간표</a>
       </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">개인시간표 입력</a>
+      </li>
     </ul>
   </div>  
 </nav>
 
-<div id="page-wrapper">
+<!-- <div id="page-wrapper"> -->
 	<!-- 사이드바  -->
-	<div id="sidebar-wrapper">
+	<%-- <div id="sidebar-wrapper">
 	  <ul class="sidebar-nav">
 	    <!-- <li class="sidebar-brand" style="color:#999">운영시간표 짜기</li> --><br>
 	    <li><a href="<%=request.getContextPath()%>/operationTable">개인 시간표 입력</a></li>
 	    <li><a href="<%=request.getContextPath()%>/MakingOperationTable">운영시간표 짜기 </a></li>
 	  </ul>
-	</div>
+	</div> --%>
  	 
 	<!-- 시간표 테이블  -->
 	<div class="container">
 	  <br><br><h2>개인 시간표 입력</h2><br>  
-	  <p>수업이나 스케줄이 있는 시간을 클릭하세요! </p>     
-	      
+	  <p>💡수업이나 스케줄이 있는 시간을 클릭하세요. </p>  
+	  <p>⚠️예를 들어 4시 15분에 끝나는 수업이 있다면, 4-5시 칸도 선택해야 합니다.</p>   
+	  
+	  <div class="table-responsive">     
 	  <table class="table table-bordered">
 	    <thead class="table-info">
 	      <tr>
 	      	<th>시간</th>
-	        <th>월요일</th>
-	        <th>화요일</th>
-	        <th>수요일</th>
-	        <th>목요일</th>
-	        <th>금요일</th>
+	        <th>월</th>
+	        <th>화</th>
+	        <th>수</th>
+	        <th>목</th>
+	        <th>금</th>
 	      </tr>
 	    </thead>
 	    <tbody>
@@ -126,6 +132,7 @@
 	      </tr> 
 	    </tbody>
 	  </table>
+	  </div>
 	  
 	  <form name="class_form" method="POST" action="OperationTableServlet" accept-charset="utf-8">
 		<h5>이름</h5>
@@ -143,7 +150,7 @@
 		</form>
 	  </c:forEach>
 	</div><br><br>
-</div>
+<!-- </div> -->
 
 </body>
 	<script type="text/javascript" src="js/operationJS.js"></script>

@@ -40,21 +40,24 @@
         <a class="nav-link" href="<%=request.getContextPath()%>/chooseMusic">선곡표 만들기</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">운영시간표</a>
+        <a class="nav-link" href="<%=request.getContextPath()%>/MakingOperationTable">운영시간표</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">개인시간표 입력</a>
       </li>  
     </ul>
   </div>  
 </nav>
-<br>
+<br><br>
 
-<div style="padding-left: 50px; padding-right: 50px">
+<div class="title">
 	<!-- 제목 -->
 	<div style="width: 250px">
-		<a class="nav-link" href="<%=request.getContextPath()%>/addMusicDirectly"><h2 style="color: black">곡 직접 입력하기</h2></a>
+		<a class="nav-link" href="<%=request.getContextPath()%>/addMusicDirectly"><h2 style="color: black">곡 직접 입력</h2></a>
 	</div>
 </div>
 
-<div style="padding-left: 100px; padding-right: 100px">
+<div class="content">
 <form name="music_form" method="POST" action="addMusicDirectly" accept-charset="utf-8">
 	<br><h5>바코드 넘버 (필수)</h5>
 	<input type = "text" name = "barcode" maxlength="20" id = "input_barcode" class="form-control" placeholder="숫자로만 입력" required pattern="\d*" title="숫자로만 입력하세요."/><br><br>
@@ -142,7 +145,7 @@
 	  <option value="기타">기타</option> 
 	</select><br>
 	
-	<input type = "text" name = "composerFromInput" class="form-control" placeholder="기타일 경우, Last name만 직접 입력. 예) Mozart" />
+	<input type = "text" name = "composerFromInput" class="form-control" placeholder="기타일 경우 성만 직접 입력. 예)Bach" />
 	<br><br>
 			   
 	<h5>선호도</h5>
@@ -150,9 +153,11 @@
 	<input type = "radio" name = "importance" value = "2" />&nbsp;중&ensp;&ensp;
 	<input type = "radio" name = "importance" value = "1" />&nbsp;하<br><br><br>
 	
-	<a href="<%=request.getContextPath()%>/MusicList" class="btn btn-outline-info"> ← 이전 </a> &ensp;
-	<input type = "reset" value = "내용지우기" class="btn btn-outline-info"/>&ensp;
-	<input type = "submit" value = "제출하기" id = "submit_button" class="btn btn-info"/>
+	<div class="after_form">
+		<a href="<%=request.getContextPath()%>/MusicList" class="btn btn-outline-info"> ← 이전 </a> &ensp;
+		<input type = "reset" value = "내용지우기" class="btn btn-outline-info"/>&ensp;
+		<input type = "submit" value = "제출하기" id = "submit_button" class="btn btn-info"/>
+	</div>
 </form>
 <br><br>
 </div>

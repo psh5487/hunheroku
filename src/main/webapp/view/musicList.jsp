@@ -39,35 +39,49 @@
         <a class="nav-link" href="<%=request.getContextPath()%>/chooseMusic">선곡표 만들기</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">운영시간표</a>
+        <a class="nav-link" href="<%=request.getContextPath()%>/MakingOperationTable">운영시간표</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">개인시간표 입력</a>
       </li>  
     </ul>
   </div>  
 </nav>
-<br>
+<br><br>
 
-<div style="padding-left: 50px; padding-right: 50px">
+<div class="title">
 	<!-- 제목 -->
 	<div style="width: 250px">
 		<a class="nav-link" href="<%=request.getContextPath()%>/MusicList"><h2 style="color: black">헌 음반 리스트</h2></a>
 	</div>
+</div>
 
-	<div style="display:flex; justify-content: flex-end">
+<div class="content">
+	<div class = "before_list">
 	    <!-- 검색 상자&버튼 -->
-		<form name="search_form" id = "search_form" method="POST" action="search" accept-charset="utf-8" class="form-inline">
-		 	<input type="text" placeholder="검색" name="search" class="form-control"> &ensp;
-		 	<input type="image" src="img/search.png" name="search" id="searchButton" width="30px" height="auto"/> &ensp;&ensp;
-		</form>
-	  	<a href="<%=request.getContextPath()%>/addMusic">
-			<button type="button" class="btn" id="easy_button">+ 곡 간편 추가</button>
-		</a> &ensp;  
-		<a href="<%=request.getContextPath()%>/addMusicDirectly">
-			<button type="button" class="btn btn-info">+ 곡 직접 추가</button>
-		</a>
+	    <div>
+			<form name="search_form" id = "search_form" method="POST" action="search" accept-charset="utf-8" class="form-inline">
+				<div class="form-group" style="margin-right: 10px">
+			 		<input type="text" placeholder="검색" name="search" class="form-control">
+			 	</div>
+			 	<div class="form-group" style="margin-right: 20px">
+			 		<input type="image" src="img/search.png" name="search" id="searchButton" width="30px" height="auto"/>
+			 	</div>
+			</form>
+		</div>
+		<div class = "musicAdd_button">
+		  	<a href="<%=request.getContextPath()%>/addMusic">
+				<button type="button" class="btn" id="easy_button">+ 곡 간편 추가</button>
+			</a>  
+			<a href="<%=request.getContextPath()%>/addMusicDirectly">
+				<button type="button" class="btn btn-info" id="hard_button">+ 곡 직접 추가</button>
+			</a>
+		</div>
 	</div><br>
     
     <div style="font-size: 20px; margin-bottom: 10px">Total <span class="text-danger">${count}</span>곡, ${cur}/${pageCount}</div>
-    
+  
+  <div class="table-responsive">  
   <table class="table">
     <thead class="thead-light">
       <tr>
@@ -134,11 +148,11 @@
 		</tr>
 	</c:forEach>
 	<tr>
-		<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+		<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
 	</tr>
     </tbody>
   </table>
-  
+  </div>
   
   <!-- pagination -->
   <ul class="pagination justify-content-center">

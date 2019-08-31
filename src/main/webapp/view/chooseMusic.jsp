@@ -39,19 +39,21 @@
         <a class="nav-link" href="<%=request.getContextPath()%>/chooseMusic">선곡표 만들기</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">운영시간표</a>
+        <a class="nav-link" href="<%=request.getContextPath()%>/MakingOperationTable">운영시간표</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="<%=request.getContextPath()%>/operationTable">개인시간표 입력</a>
       </li>  
     </ul>
   </div>  
 </nav>
 <br>
 
-<div style="padding-left: 50px; padding-right: 50px">
+<div class="container">
 	<!-- 제목 -->
-	<a class="nav-link"><h2>선곡표 만들기</h2></a><br>
-</div>	
-<div style="padding-left: 70px; padding-right: 50px">
-	<img class = "chooseMusicImg" src="img/music_player.png" alt="선곡표 만들기" style="width:10%">
+	<br><h2>선곡표 만들기</h2><br>
+
+	<img class = "chooseMusicImg" src="img/music_player.png" alt="선곡표 만들기">
 	<span style="font-size: 18px; margin-left: 20px">" Music List에 있는 곡들을 랜덤으로 뽑아 생성합니다. "</span>
 	<!-- <span style="font-size: 18px; margin-left: 20px">" Music List에 있는 곡들 중 [시대 + 작곡가 + 선호도] 를 고려하여 랜덤으로 생성됩니다. "</span> -->
 	
@@ -64,6 +66,7 @@
 	
 	<br><h2>결과</h2><br>
 	
+	<div class="table-responsive">
 	<table class="table table-bordered">
 		<thead class="thead-light">
 			<tr>
@@ -169,6 +172,7 @@
 		    </tr>
 		</tbody>
 	</table>
+	</div>
 </div><br><br>
 </body>
 </html>

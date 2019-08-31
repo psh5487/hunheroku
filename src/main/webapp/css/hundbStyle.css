@@ -5,7 +5,12 @@ body {
     padding: 0;
 }
 
-span a { 
+a { 
+	text-decoration: none; 
+	color: black;
+}
+
+a:hover {
 	text-decoration: none; 
 	color: black;
 }
@@ -121,6 +126,72 @@ footer {
 #easy_button:hover {
 	background-color: #d68282; 
 }
+
+.before_list {
+	display: flex; 
+	justify-content: flex-end;
+}
+
+#easy_button {
+	margin-right: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+	.before_list {
+  		display: flex; 
+		flex-direction: column;
+	}
+  
+	.musicAdd_button {
+  		margin-top: 15px;
+  	}
+}
+
+@media (max-width: 350px) {
+	#hard_button {
+		margin-top: 10px;
+	}
+}
+
+/* musicForm.jsp, musicComplexForm.jsp, musicList.jsp */
+.title {
+	padding-left: 80px; 
+}
+
+.content {
+	padding-left: 100px; 
+	padding-right: 100px;
+}
+
+@media (max-width: 550px) {
+	.title {
+		padding-left: 10px; 
+		padding-right: 30px;
+	}
+
+	.content {
+		padding-left: 30px; 
+		padding-right: 30px;
+	}
+}
+
+/* musicForm.jsp, musicComplexForm.jsp */
+.after_form {
+	margin-bottom: 20px;
+}
+
+@media (max-width: 340px) {
+	#submit_button {
+		margin-top: 10px;
+	}
+}
+
+/* chooseMusic.jsp */
+.chooseMusicImg {
+	width:50px;
+}
+
 
 
 
