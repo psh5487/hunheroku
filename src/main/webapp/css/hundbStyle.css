@@ -152,6 +152,10 @@ header {
 	margin-right: 10px;
 }
 
+.modal-backdrop {
+  z-index: -1;
+}
+
 /* Responsive layout */
 @media (max-width: 600px) {
 	.before_list {

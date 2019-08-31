@@ -111,7 +111,7 @@
 	   				<div style="cursor: pointer; color: gray; margin-top: 10px">▼Track</div>
 	  			</a>
 				
-				<!-- The Modal -->
+				<!-- The Modal --> <!-- data-backdrop="false" -->
 				<div class="modal" id="myModal${vs.index}">
 				  <div class="modal-dialog modal-dialog-centered modal-xl">
 				    <div class="modal-content">
