@@ -102,11 +102,14 @@
 	<c:forEach items="${list}" var="item" begin="0" end="10" varStatus="vs">
 		<tr>
 			<td>${item.id}</td>
-			<td>${item.title}
+			<td>${item.title} <br>
 			    <!-- Button to Open the Modal -->
-	  			<div data-toggle="modal" id="modalBtn" data-target="#myModal${vs.index}">
+	  			<%-- <div data-toggle="modal" id="modalBtn" data-target="#myModal${vs.index}">
 	   				<div style="cursor: pointer; color: gray; margin-top: 10px">▼Track</div>
-	  			</div>
+	  			</div> --%>
+	  			<a href="#" data-toggle="modal" id="modalBtn" data-target="#myModal${vs.index}">
+	   				<div style="cursor: pointer; color: gray; margin-top: 10px">▼Track</div>
+	  			</a>
 				
 				<!-- The Modal -->
 				<div class="modal" id="myModal${vs.index}">
