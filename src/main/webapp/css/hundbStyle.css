@@ -152,8 +152,8 @@ header {
 	margin-right: 10px;
 }
 
-.modal-backdrop {
-  z-index: -1;
+.modal-content {
+  z-index: 1060;
 }
 
 /* Responsive layout */

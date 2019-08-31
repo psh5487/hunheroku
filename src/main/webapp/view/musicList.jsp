@@ -114,8 +114,8 @@
 				<!-- The Modal --> <!-- data-backdrop="false" -->
 				<div class="modal" id="myModal${vs.index}">
 				  <div class="modal-dialog modal-dialog-centered modal-xl">
-				    <div class="modal-content">
 				    
+				    <div class="modal-content">
 				      <!-- Modal Header -->
 				      <div class="modal-header">
 				        <h5 class="modal-title">${item.title}</h5>
@@ -127,8 +127,10 @@
 				        <p style="white-space:pre-line;">${item.track}</p>
 				      </div>
 				    </div>
+				    
 				  </div>
 				</div>
+				
 			</td>
 			<td><p style="white-space:pre;">${item.artist}</p></td>
 			<td><p style="white-space:pre-line;">${item.composer}</p></td>
@@ -156,7 +158,7 @@
     </tbody>
   </table>
   </div>
-  
+   
   <!-- pagination -->
   <ul class="pagination justify-content-center">
   	<li class="page-item <c:if test="${begin==1}">disabled</c:if>"><a class="page-link" id="gotoHead" href="MusicList?start=0">처음</a></li>
