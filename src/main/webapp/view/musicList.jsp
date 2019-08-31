@@ -57,7 +57,7 @@
 </div>
 
 <div class="content">
-	<div class = "before_list">
+	<div class="before_list">
 	    <!-- 검색 상자&버튼 -->
 	    <div>
 			<form name="search_form" id = "search_form" method="POST" action="search" accept-charset="utf-8" class="form-inline">
@@ -79,7 +79,7 @@
 		</div>
 	</div><br>
     
-    <div style="font-size: 20px; margin-bottom: 10px">Total <span class="text-danger">${count}</span>곡, ${cur}/${pageCount}</div>
+    <div class="countMusic">Total <span class="text-danger">${count}</span>곡, ${cur}/${pageCount}</div>
   
   <div class="table-responsive">  
   <table class="table">

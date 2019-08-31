@@ -137,6 +137,7 @@ header {
 #easy_button {
 	background-color: #f08787; 
 	color: white;
+	margin-right: 10px;
 }
 
 #easy_button:hover {
@@ -148,8 +149,13 @@ header {
 	justify-content: flex-end;
 }
 
-#easy_button {
-	margin-right: 10px;
+.countMusic {
+	font-size: 20px; 
+	margin-bottom: 10px;
+}
+
+.countMusic, .before_list, .title, .navbar {
+	z-index: 0;
 }
 
 /* .modal-content {
