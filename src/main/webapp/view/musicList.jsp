@@ -65,7 +65,7 @@
 			 		<input type="text" placeholder="검색" name="search" class="form-control">
 			 	</div>
 			 	<div class="form-group" style="margin-right: 20px">
-			 		<input type="image" src="img/search.png" name="search" id="searchButton" width="30px" height="auto"/>
+			 		<input type="image" src="img/search.png" name="search" id="searchButton" width="20px" height="auto"/>
 			 	</div>
 			</form>
 		</div>
@@ -115,7 +115,7 @@
 				    
 				      <!-- Modal Header -->
 				      <div class="modal-header">
-				        <h2 class="modal-title">${item.title}</h2>
+				        <h5 class="modal-title">${item.title}</h5>
 				        <button type="button" class="close" data-dismiss="modal">×</button>
 				      </div>
 				      
@@ -156,8 +156,8 @@
   
   <!-- pagination -->
   <ul class="pagination justify-content-center">
-  	<li class="page-item <c:if test="${begin==1}">disabled</c:if>"><a class="page-link" id="gotoHead" href="MusicList?start=0">〈〈</a></li>
-    <li class="page-item <c:if test="${begin==1}">disabled</c:if>"><a class="page-link" id="previous" href="MusicList?start=${(begin - pageRange -1) * 10}">◀</a></li>
+  	<li class="page-item <c:if test="${begin==1}">disabled</c:if>"><a class="page-link" id="gotoHead" href="MusicList?start=0">처음</a></li>
+    <li class="page-item <c:if test="${begin==1}">disabled</c:if>"><a class="page-link" id="previous" href="MusicList?start=${(begin - pageRange -1) * 10}"><</a></li>
     
     <%-- <c:forEach items="${pageStartList}" var="pageIndex" varStatus="status">
     	<li class="page-item" id="page"><a class="page-link" href="MusicList?start=${pageIndex}">${status.index +1}</a></li>
@@ -185,8 +185,8 @@
     </c:otherwise>
 	</c:choose>
 
-    <li class="page-item <c:if test="${begin==lastBegin}">disabled</c:if>"><a class="page-link" id="next" href="MusicList?start=${(begin + pageRange -1) * 10}">▶</a></li>
-    <li class="page-item <c:if test="${begin==lastBegin}">disabled</c:if>"><a class="page-link" id="gotoTail" href="MusicList?start=${(pageCount -1) * 10}">〉〉</a></li>
+    <li class="page-item <c:if test="${begin==lastBegin}">disabled</c:if>"><a class="page-link" id="next" href="MusicList?start=${(begin + pageRange -1) * 10}">></a></li>
+    <li class="page-item <c:if test="${begin==lastBegin}">disabled</c:if>"><a class="page-link" id="gotoTail" href="MusicList?start=${(pageCount -1) * 10}">끝</a></li>
   </ul>
   
   <br><br>

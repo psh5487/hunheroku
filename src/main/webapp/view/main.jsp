@@ -50,6 +50,8 @@
   </div>  
 </nav>
 
+<div class="mainWrapper">
+<div class="main">
 <!-- 슬라이드쇼 -->
 <div id="demo" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -84,10 +86,13 @@
 	<a href = "https://www.facebook.com/skku.musicholic/" target = "_blank"><img class = "facebook" src="img/facebook.png" alt="페이스북"></a> &nbsp;&nbsp;
 	<a href = "https://place.map.kakao.com/17568205" target = "_blank"><img class = "map" src="img/map.png" alt="지도"></a>
 </div>
+</div>
 
-<footer>
-음취헌 | 성균관대학교 자연과학캠퍼스 복지회관 3층 | Developed by Sohyun
-</footer>
+<div class = "footer">
+	<p>음취헌 | 성균관대학교 자연과학캠퍼스 복지회관 3층 | Developed by Sohyun</p>
+</div>
+
+</div>
 
 </body>
 </html>
