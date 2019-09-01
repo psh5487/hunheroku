@@ -90,7 +90,7 @@
 	  			</div>
 				
 				<!-- The Modal -->
-				<div class="modal" id="myModal${vs.index}">
+				<div class="modal" data-backdrop="false" id="myModal${vs.index}">
 				  <div class="modal-dialog modal-dialog-centered modal-xl">
 				    <div class="modal-content">
 				    
@@ -104,9 +104,16 @@
 				      <div class="modal-body">
 				        <p style="white-space:pre-line;">${item.track}</p>
 				      </div>
+				      
+				      <!-- Modal footer -->
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				      </div>
+				      
 				    </div>
 				  </div>
 				</div>
+				
 			</td>
 			<td><p style="white-space:pre;">${item.artist}</p></td>
 			<td><p style="white-space:pre-line;">${item.composer}</p></td>
