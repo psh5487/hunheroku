@@ -28,10 +28,13 @@ div a:hover {
 	background-color: white;
 }
 
+#hard_button {
+	margin-right: 10px;
+}
+
 #easy_button {
 	background-color: #f08787; 
 	color: white;
-	margin-right: 10px;
 }
 
 #easy_button:hover {
@@ -48,7 +51,7 @@ div a:hover {
 	margin-bottom: 10px;
 }
 
-.modal-header, .modal-body {
+.modal-header, .modal-body, .modal-footer {
 	background-color: #f3f7f9;
 }
 
@@ -78,7 +81,7 @@ div a:hover {
 }
 
 @media (max-width: 309px) {
-	#hard_button {
+	#easy_button {
 		margin-top: 10px;
 	}
 }

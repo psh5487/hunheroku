@@ -70,12 +70,12 @@
 			 	</div>
 			</form>
 		</div>
-		<div class = "musicAdd_button">
-		  	<a href="<%=request.getContextPath()%>/addMusic">
-				<button type="button" class="btn" id="easy_button">+ 곡 간편 추가</button>
-			</a>  
+		<div class = "musicAdd_button">  
 			<a href="<%=request.getContextPath()%>/addMusicDirectly">
 				<button type="button" class="btn btn-info" id="hard_button">+ 곡 직접 추가</button>
+			</a>
+			<a href="<%=request.getContextPath()%>/addMusic">
+				<button type="button" class="btn" id="easy_button">+ 곡 간편 추가</button>
 			</a>
 		</div>
 	</div>
@@ -174,7 +174,13 @@
 	      <div class="modal-body">
 	        <p style="white-space:pre-line;">${item.track}</p>
 	      </div>
+	      
+	      <!-- Modal footer -->
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
 	    </div>
+	    
 	  </div>
 	</div>
     

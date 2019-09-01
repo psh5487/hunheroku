@@ -56,8 +56,19 @@
 <div class="content">
 <form name="music_form" method="POST" action="addMusic" accept-charset="utf-8">
 	<br><h5>바코드 넘버</h5>
-	<input type = "text" name = "barcode" maxlength="20" id = "input_barcode" class="form-control" placeholder="숫자로만 입력" required pattern="\d*" title="숫자로만 입력하세요."/><br><br>
+	<input type = "text" name = "barcode" maxlength="20" id = "input_barcode" class="form-control" placeholder="숫자로만 입력" required pattern="\d*" title="숫자로만 입력하세요."/>
 	
+	<div class="dropdown dropright" style="margin-top: 10px;">
+	  <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown">예시 </button>
+	  <div class="dropdown-menu">
+	    <img src="img/barcode.jpg" alt="바코드 입력 예시" style="width: 200px;">
+	  </div>
+	</div>
+	
+	<!-- <p><span style="color: red;">예시</span></p>
+	<img src="img/barcode.png" alt="바코드 입력 예시" style="width: 200px;"> -->
+	
+	<br><br>
 	<h5>작곡가</h5>
 	<select name="composerFromSelect" class="form-control">
 	  <option value="" disabled selected>대표 작곡가 선택</option>
@@ -134,15 +145,16 @@
 	<input type = "radio" name = "importance" value = "2" />&nbsp;중&ensp;&ensp;
 	<input type = "radio" name = "importance" value = "1" />&nbsp;하<br><br><br>
 	
+	<p class="text-muted">제출 후, 결과창이 뜰 때까지 기다리세요 :)</p>
     <div class="after_form">
 		<a href="<%=request.getContextPath()%>/MusicList" class="btn btn-outline-info"> ← 이전 </a> &ensp;
 		<input type = "reset" value = "내용지우기" class="btn btn-outline-info"/>&ensp;
 		<input type = "submit" value = "제출하기" id = "submit_button" class="btn btn-info"/>
 	</div>
-	
 </form>
 
 </div>
+<br><br>
 
 </body>
 </html>
