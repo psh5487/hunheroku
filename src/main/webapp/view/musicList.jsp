@@ -24,6 +24,7 @@
 </head>
 
 <body>
+ 
 <!-- 네브바 -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <a class="navbar-brand" href="<%=request.getContextPath()%>/">음취헌</a>
@@ -77,12 +78,15 @@
 				<button type="button" class="btn btn-info" id="hard_button">+ 곡 직접 추가</button>
 			</a>
 		</div>
-	</div><br>
+	</div>
+	<br>
     
     <div class="countMusic">Total <span class="text-danger">${count}</span>곡, ${cur}/${pageCount}</div>
-  
-  <div class="table-responsive">  
-  <table class="table">
+	
+	
+  	<div class="table-responsive">  
+  	<table class="table">
+    
     <thead class="thead-light">
       <tr>
         <th>No</th>
@@ -97,9 +101,10 @@
         <th></th>
       </tr>
     </thead>
-    
+
+ 	<c:forEach items="${list}" var="item" begin="0" end="10" varStatus="vs">
     <tbody>
-	<c:forEach items="${list}" var="item" begin="0" end="10" varStatus="vs">
+	<%-- <c:forEach items="${list}" var="item" begin="0" end="10" varStatus="vs"> --%>
 		<tr>
 			<td>${item.id}</td>
 			<td>${item.title} <br>
@@ -111,7 +116,7 @@
 	   				<div style="cursor: pointer; color: gray; margin-top: 10px">▼Track</div>
 	  			</a>
 				
-				<!-- The Modal -->
+				<%-- <!-- The Modal -->
 				<div class="modal" data-backdrop="false" id="myModal${vs.index}">
 				  <div class="modal-dialog modal-dialog-centered modal-xl">
 				    
@@ -129,7 +134,7 @@
 				    </div>
 				    
 				  </div>
-				</div>
+				</div> --%>
 				
 			</td>
 			<td><p style="white-space:pre;">${item.artist}</p></td>
@@ -150,15 +155,35 @@
 					<input type="hidden" name="item_barcode" value="${item.barcode}" />
 				</form>
 			</td>
-		</tr>
-	</c:forEach>
-	<tr>
-		<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
-	</tr>
+		</tr>		
+	<%-- </c:forEach> --%>
     </tbody>
+  
+    <!-- The Modal -->
+	<div class="modal" data-backdrop="false" id="myModal${vs.index}">
+	  <div class="modal-dialog modal-dialog-centered modal-xl">
+	    
+	    <div class="modal-content">
+	      <!-- Modal Header -->
+	      <div class="modal-header">
+	        <h5 class="modal-title">${item.title}</h5>
+	        <button type="button" class="close" data-dismiss="modal">×</button>
+	      </div>
+	      
+	      <!-- Modal body -->
+	      <div class="modal-body">
+	        <p style="white-space:pre-line;">${item.track}</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+    
+    </c:forEach>
+    
   </table>
   </div>
-   
+  </div>
+    
   <!-- pagination -->
   <ul class="pagination justify-content-center">
   	<li class="page-item <c:if test="${begin==1}">disabled</c:if>"><a class="page-link" id="gotoHead" href="MusicList?start=0">처음</a></li>
@@ -195,7 +220,6 @@
   </ul>
   
   <br><br>
-</div>
 
 </body>
 	<!-- <script type="text/javascript" src="js/paginationJS.js"></script> -->

@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+html{ 
+    overflow: scroll; 
+    -webkit-overflow-scrolling: touch;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -154,17 +159,18 @@ header {
 	margin-bottom: 10px;
 }
 
-.countMusic, .before_list, .title, .navbar {
-	z-index: 0;
+.modal-header, .modal-body {
+	background-color: #f3f7f9;
 }
+
+/* .countMusic, .before_list, .title, .navbar {
+	z-index: 0;
+} */
 
 /* .modal-content {
   z-index: 1060;
 } */
 
-.modal-header, .modal-body {
-	background-color: #f3f7f9;
-}
 
 /* Responsive layout */
 @media (max-width: 600px) {
