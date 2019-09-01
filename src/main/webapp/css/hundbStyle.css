@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
 html{ 
-    overflow: scroll; 
+    /* overflow: scroll;  */
     -webkit-overflow-scrolling: touch;
+    overflow: visible;
 }
 
 body {
@@ -22,16 +23,98 @@ div a:hover {
 	color: black;
 }
 
-header {
-  background-color: black;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+/* MusicList.jsp */
+#search_form button {
+	background-color: white;
 }
 
+#easy_button {
+	background-color: #f08787; 
+	color: white;
+	margin-right: 10px;
+}
+
+#easy_button:hover {
+	background-color: #d68282; 
+}
+
+.before_list {
+	display: flex; 
+	justify-content: flex-end;
+}
+
+.countMusic {
+	font-size: 20px; 
+	margin-bottom: 10px;
+}
+
+.modal-header, .modal-body {
+	background-color: #f3f7f9;
+}
+
+/* .countMusic, .before_list, .title, .navbar {
+	z-index: 0;
+} */
+
+.content {
+	z-index: 0;
+}
+
+.modal-content {
+  z-index: 2000 !important;
+}
+
+
+/* Responsive layout */
+@media (max-width: 600px) {
+	.before_list {
+  		display: flex; 
+		flex-direction: column;
+	}
+  
+	.musicAdd_button {
+  		margin-top: 15px;
+  	}
+}
+
+@media (max-width: 309px) {
+	#hard_button {
+		margin-top: 10px;
+	}
+}
+
+/* musicList.jsp, musicForm.jsp, musicComplexForm.jsp */
+.title {
+	padding-left: 80px; 
+}
+
+.content {
+	padding-left: 100px; 
+	padding-right: 100px;
+}
+
+@media (max-width: 550px) {
+	.title {
+		padding-left: 10px; 
+		padding-right: 30px;
+	}
+
+	.content {
+		padding-left: 30px; 
+		padding-right: 30px;
+	}
+}
+
+/* musicForm.jsp, musicComplexForm.jsp */
+.after_form {
+	margin-bottom: 20px;
+}
+
+@media (max-width: 340px) {
+	#submit_button {
+		margin-top: 10px;
+	}
+}
 
 /* main.jsp */
 .slideImg, .introductionImg {
@@ -134,94 +217,6 @@ header {
   line-height: 3em;
 }
 
-/* MusicList.jsp */
-#search_form button {
-	background-color: white;
-}
-
-#easy_button {
-	background-color: #f08787; 
-	color: white;
-	margin-right: 10px;
-}
-
-#easy_button:hover {
-	background-color: #d68282; 
-}
-
-.before_list {
-	display: flex; 
-	justify-content: flex-end;
-}
-
-.countMusic {
-	font-size: 20px; 
-	margin-bottom: 10px;
-}
-
-.modal-header, .modal-body {
-	background-color: #f3f7f9;
-}
-
-/* .countMusic, .before_list, .title, .navbar {
-	z-index: 0;
-} */
-
-/* .modal-content {
-  z-index: 1060;
-} */
-
-
-/* Responsive layout */
-@media (max-width: 600px) {
-	.before_list {
-  		display: flex; 
-		flex-direction: column;
-	}
-  
-	.musicAdd_button {
-  		margin-top: 15px;
-  	}
-}
-
-@media (max-width: 309px) {
-	#hard_button {
-		margin-top: 10px;
-	}
-}
-
-/* musicForm.jsp, musicComplexForm.jsp, musicList.jsp */
-.title {
-	padding-left: 80px; 
-}
-
-.content {
-	padding-left: 100px; 
-	padding-right: 100px;
-}
-
-@media (max-width: 550px) {
-	.title {
-		padding-left: 10px; 
-		padding-right: 30px;
-	}
-
-	.content {
-		padding-left: 30px; 
-		padding-right: 30px;
-	}
-}
-
-/* musicForm.jsp, musicComplexForm.jsp */
-.after_form {
-	margin-bottom: 20px;
-}
-
-@media (max-width: 340px) {
-	#submit_button {
-		margin-top: 10px;
-	}
-}
 
 /* chooseMusic.jsp */
 .chooseMusicImg {
