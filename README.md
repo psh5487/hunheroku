@@ -5,10 +5,11 @@ https://hunmusic.herokuapp.com/
 
 ## Stack
 - JAVA
-- JSP
+- JSP/JSTL
 - MySQL
-- HTML/CSS/JQuery
-- Bootstrap
+- Gson, Jsoup lib
+- HTML/CSS/Javascript
+- JQuery/Bootstrap
 - Heroku
 
 ## 기능
